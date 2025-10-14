@@ -1,7 +1,7 @@
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-import User from "./models/User";
-import { JWT_SECRET } from "./config";
+import User from "./models/User.js";
+import { JWT_SECRET } from "./config.js";
 
 export const resolvers = {
     Query: {

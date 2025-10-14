@@ -13,7 +13,7 @@ app.use(cors());
 const getUser = (token) => {
     try {
         if (token) {
-            return jwt.verify(token, JWR_)
+            return jwt.verify(token, JWT_SECRET)
         }
         return null;
     } catch {
