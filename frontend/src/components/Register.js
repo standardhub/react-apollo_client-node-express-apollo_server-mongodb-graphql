@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {useMutation} from "@apollo/client";
+import { useMutation } from "@apollo/client";
 import { REGISTER_USER } from "../graphql/mutations";
 
 const Register = () => {
@@ -8,13 +8,13 @@ const Register = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const {data} = await register({variables: form});
+        const { data } = await register({ variables: form });
         localStorage.setItem("token", data.register.token);
         alert("Registered Successfully!");
     }
-    
+
     return (
-        <form action="">
+        <form onSubmit={handleSubmit}>
             <h2>Register</h2>
             <input placeholder="Name" onChange={(e) => setForm({ ...form, name: e.target.value })} />
             <input placeholder="Email" onChange={(e) => setForm({ ...form, email: e.target.value })} />
