@@ -54,6 +54,12 @@ graphql-auth-app/
 
 ---
 
+## ⚠️ Node Version
+
+**Requires Node.js v22 or higher**
+
+---
+
 ## ⚙️ Backend Setup
 
 1. Go to the backend folder
